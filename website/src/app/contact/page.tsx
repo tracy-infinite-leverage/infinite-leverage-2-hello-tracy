@@ -1,15 +1,9 @@
-const channels = [
-  {
-    label: "Email",
-    value: "tracy@infiniteleverage-2.com",
-    href: "mailto:tracy@infiniteleverage-2.com",
-    desc: "Best for project enquiries and longer conversations.",
-  },
-];
+import ContactForm from "@/components/ContactForm";
 
 export default function Contact() {
   return (
     <main>
+      {/* Hero */}
       <section style={{ background: "var(--ink)" }} className="py-20">
         <div className="max-w-6xl mx-auto px-8 md:px-16">
           <p
@@ -34,54 +28,70 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Form + sidebar */}
       <section style={{ background: "var(--paper)" }} className="py-20">
-        <div className="max-w-6xl mx-auto px-8 md:px-16">
-          {channels.map((c) => (
-            <div
-              key={c.label}
-              className="flex flex-col sm:flex-row sm:items-start gap-4 py-8 border-t"
-              style={{ borderColor: "var(--rule)" }}
+        <div className="max-w-6xl mx-auto px-8 md:px-16 flex flex-col lg:flex-row gap-16">
+
+          {/* Form */}
+          <div className="flex-1 min-w-0">
+            <p
+              className="font-mono uppercase tracking-widest mb-2"
+              style={{ color: "var(--blue)", fontSize: "0.75em" }}
             >
-              <span
-                className="font-mono uppercase tracking-widest shrink-0 pt-0.5"
-                style={{ color: "var(--gray-1)", fontSize: "0.75em", width: "80px" }}
-              >
-                {c.label}
-              </span>
+              Send a message
+            </p>
+            <h2
+              className="font-sans font-extrabold mb-2"
+              style={{ color: "var(--ink)", fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}
+            >
+              Start a conversation
+            </h2>
+            <ContactForm />
+          </div>
+
+          {/* Sidebar */}
+          <aside style={{ width: "260px", flexShrink: 0 }} className="lg:pt-14">
+            <div className="flex flex-col gap-8">
               <div>
-                <a
-                  href={c.href}
-                  className="font-mono font-medium underline underline-offset-4"
-                  style={{ color: "var(--blue)", fontSize: "1em" }}
+                <p
+                  className="font-mono uppercase tracking-widest mb-2"
+                  style={{ color: "var(--gray-1)", fontSize: "0.7em" }}
                 >
-                  {c.value}
+                  Email
+                </p>
+                <a
+                  href="mailto:tracy@infiniteleverage-2.com"
+                  className="font-mono"
+                  style={{ color: "var(--blue)", fontSize: "0.85em" }}
+                >
+                  tracy@infiniteleverage-2.com
                 </a>
-                <p className="font-sans mt-2" style={{ color: "var(--gray-2)", fontSize: "0.9em", lineHeight: 1.6 }}>
-                  {c.desc}
+              </div>
+              <div>
+                <p
+                  className="font-mono uppercase tracking-widest mb-2"
+                  style={{ color: "var(--gray-1)", fontSize: "0.7em" }}
+                >
+                  Response time
+                </p>
+                <p className="font-sans" style={{ color: "var(--gray-2)", fontSize: "0.9em", lineHeight: 1.6 }}>
+                  Within one business day.
+                </p>
+              </div>
+              <div>
+                <p
+                  className="font-mono uppercase tracking-widest mb-2"
+                  style={{ color: "var(--gray-1)", fontSize: "0.7em" }}
+                >
+                  Based in
+                </p>
+                <p className="font-sans" style={{ color: "var(--gray-2)", fontSize: "0.9em", lineHeight: 1.6 }}>
+                  Sydney, Australia
                 </p>
               </div>
             </div>
-          ))}
-          <div
-            className="flex flex-col sm:flex-row sm:items-start gap-4 py-8 border-t"
-            style={{ borderColor: "var(--rule)" }}
-          >
-            <span
-              className="font-mono uppercase tracking-widest shrink-0 pt-0.5"
-              style={{ color: "var(--gray-1)", fontSize: "0.75em", width: "80px" }}
-            >
-              Direct
-            </span>
-            <div>
-              <a
-                href="mailto:tracy@infiniteleverage-2.com"
-                className="font-mono font-medium px-6 py-3 rounded inline-block"
-                style={{ background: "var(--blue)", color: "#fff", fontSize: "0.85em" }}
-              >
-                Send a message
-              </a>
-            </div>
-          </div>
+          </aside>
+
         </div>
       </section>
     </main>
