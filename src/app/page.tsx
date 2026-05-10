@@ -31,129 +31,171 @@ export default function Home() {
   return (
     <main>
       {/* Section 1 — Hero */}
-      <section
-        style={{ background: "#0F172A" }}
-        className="min-h-screen flex flex-col justify-between px-8 py-16 md:px-16"
-      >
-        <div className="flex-1 flex flex-col justify-center">
-          <h1
-            className="font-sans font-extrabold text-white leading-none"
-            style={{
-              fontSize: "clamp(72px, 10vw, 160px)",
-              letterSpacing: "-0.035em",
-            }}
-          >
-            Hello, Tracy.
-          </h1>
-          <p
-            className="mt-4 font-sans"
-            style={{ color: "#CBD5E1", fontSize: "1.4em" }}
-          >
-            Infinite Leverage 2
-          </p>
-        </div>
-        <div className="flex items-center gap-2 mt-8">
-          <span
-            className="inline-block w-2 h-2 rounded-full"
-            style={{ background: "#22C55E" }}
-          />
-          <span
-            className="font-mono uppercase tracking-widest"
-            style={{ color: "#CBD5E1", fontSize: "0.8em" }}
-          >
-            AI team is online
-          </span>
+      <section style={{ background: "var(--ink)" }} className="py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 flex flex-col justify-between min-h-[60vh]">
+          <div className="flex-1 flex flex-col justify-center">
+            <p
+              className="font-mono uppercase tracking-widest mb-6"
+              style={{ color: "var(--gray-2)", fontSize: "0.75em" }}
+            >
+              Infinite Leverage 2
+            </p>
+            <h1
+              className="font-sans font-extrabold text-white leading-none"
+              style={{
+                fontSize: "clamp(56px, 9vw, 144px)",
+                letterSpacing: "-0.035em",
+              }}
+            >
+              Hello,
+              <br />
+              Tracy.
+            </h1>
+            <p
+              className="mt-6 font-sans max-w-lg"
+              style={{ color: "var(--gray-3)", fontSize: "1.15em", lineHeight: 1.6 }}
+            >
+              Your AI team is assembled. The operating system is live.
+              Build faster than you thought possible.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-12">
+            <a
+              href="/contact"
+              className="font-mono font-medium px-6 py-3 rounded"
+              style={{ background: "var(--blue)", color: "#fff", fontSize: "0.85em" }}
+            >
+              Get started
+            </a>
+            <a
+              href="#agenda"
+              className="font-mono font-medium px-6 py-3 rounded"
+              style={{
+                border: "1px solid var(--ink-soft)",
+                color: "var(--gray-3)",
+                fontSize: "0.85em",
+              }}
+            >
+              See the agenda
+            </a>
+            <div className="flex items-center gap-2 sm:ml-4">
+              <span
+                className="inline-block w-2 h-2 rounded-full"
+                style={{ background: "var(--positive)" }}
+              />
+              <span
+                className="font-mono uppercase tracking-widest"
+                style={{ color: "var(--gray-2)", fontSize: "0.72em" }}
+              >
+                AI team online
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Section 2 — Infinite Leverage Agenda */}
-      <section
-        style={{ background: "#F2EDE3" }}
-        className="px-8 py-20 md:px-16"
-      >
-        <h2
-          className="font-sans font-extrabold mb-12"
-          style={{ color: "#0F172A", fontSize: "clamp(36px, 5vw, 72px)" }}
-        >
-          The Infinite Leverage Agenda
-        </h2>
-        <div className="flex flex-col">
-          {tracks.map((t) => (
-            <div
-              key={t.n}
-              className="flex gap-6 md:gap-10 py-6 border-t"
-              style={{ borderColor: "#E2E8F0" }}
-            >
-              <span
-                className="font-mono font-medium shrink-0 pt-0.5"
-                style={{ color: "#2563EB", fontSize: "0.9em" }}
+      {/* Section 2 — Agenda */}
+      <section id="agenda" style={{ background: "var(--cream)" }} className="py-20">
+        <div className="max-w-6xl mx-auto px-8 md:px-16">
+          <p
+            className="font-mono uppercase tracking-widest mb-4"
+            style={{ color: "var(--blue)", fontSize: "0.75em" }}
+          >
+            Programme
+          </p>
+          <h2
+            className="font-sans font-extrabold mb-12"
+            style={{ color: "var(--ink)", fontSize: "clamp(32px, 5vw, 64px)", letterSpacing: "-0.025em" }}
+          >
+            The Infinite Leverage Agenda
+          </h2>
+          <div className="flex flex-col">
+            {tracks.map((t) => (
+              <div
+                key={t.n}
+                className="flex gap-6 md:gap-10 py-6 border-t"
+                style={{ borderColor: "var(--rule)" }}
               >
-                {t.n}
-              </span>
-              <div>
-                <p className="font-sans font-bold" style={{ color: "#0F172A" }}>
-                  {t.name}
-                </p>
-                <p className="font-sans mt-1" style={{ color: "#64748B" }}>
-                  {t.desc}
+                <span
+                  className="font-mono font-medium shrink-0 pt-0.5"
+                  style={{ color: "var(--blue)", fontSize: "0.85em" }}
+                >
+                  {t.n}
+                </span>
+                <div>
+                  <p className="font-sans font-bold" style={{ color: "var(--ink)" }}>
+                    {t.name}
+                  </p>
+                  <p className="font-sans mt-1" style={{ color: "var(--gray-2)", lineHeight: 1.6 }}>
+                    {t.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3 — Protocols */}
+      <section style={{ background: "var(--paper)" }} className="py-20">
+        <div className="max-w-6xl mx-auto px-8 md:px-16">
+          <p
+            className="font-mono uppercase tracking-widest mb-4"
+            style={{ color: "var(--blue)", fontSize: "0.75em" }}
+          >
+            System
+          </p>
+          <h2
+            className="font-sans font-extrabold mb-12"
+            style={{ color: "var(--ink)", fontSize: "clamp(28px, 4vw, 56px)", letterSpacing: "-0.02em" }}
+          >
+            18 Protocols.
+            <br />
+            One operating system.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
+            {protocols.map((p) => (
+              <div
+                key={p.n}
+                className="flex gap-5 py-4 border-t"
+                style={{ borderColor: "var(--rule)" }}
+              >
+                <span
+                  className="font-mono font-medium shrink-0 pt-0.5"
+                  style={{ color: "var(--blue)", fontSize: "0.8em" }}
+                >
+                  {p.n}
+                </span>
+                <p className="font-sans" style={{ color: "var(--ink)", lineHeight: 1.6 }}>
+                  {p.text}
                 </p>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Section 3 — 18 Protocols */}
-      <section className="px-8 py-20 md:px-16" style={{ background: "#F8FAFC" }}>
-        <h2
-          className="font-sans font-extrabold mb-12"
-          style={{ color: "#0F172A", fontSize: "clamp(32px, 4vw, 60px)" }}
-        >
-          18 Protocols. One operating system.
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
-          {protocols.map((p) => (
-            <div
-              key={p.n}
-              className="flex gap-5 py-4 border-t"
-              style={{ borderColor: "#E2E8F0" }}
-            >
-              <span
-                className="font-mono font-medium shrink-0 pt-0.5"
-                style={{ color: "#2563EB", fontSize: "0.85em" }}
-              >
-                {p.n}
-              </span>
-              <p className="font-sans" style={{ color: "#0F172A" }}>
-                {p.text}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Section 4 — CTA */}
-      <section
-        style={{ background: "#0F172A" }}
-        className="px-8 py-24 md:px-16 flex flex-col items-start"
-      >
-        <blockquote
-          className="font-sans font-bold text-white mb-10"
-          style={{ fontSize: "clamp(24px, 3vw, 48px)", lineHeight: 1.25 }}
-        >
-          &ldquo;You + an AI engineer + this team
-          <br />= the new minimum viable founder.&rdquo;
-        </blockquote>
-        <p className="font-sans mb-4" style={{ color: "#CBD5E1", fontSize: "1.1em" }}>
-          Ready to build?
-        </p>
-        <a
-          href="mailto:tracy@infiniteleverage-2.com"
-          className="font-mono font-medium underline underline-offset-4"
-          style={{ color: "#2563EB", fontSize: "1em" }}
-        >
-          tracy@infiniteleverage-2.com
-        </a>
+      <section style={{ background: "var(--ink)" }} className="py-24">
+        <div className="max-w-6xl mx-auto px-8 md:px-16">
+          <blockquote
+            className="font-sans font-bold text-white mb-10"
+            style={{ fontSize: "clamp(22px, 3vw, 44px)", lineHeight: 1.25, letterSpacing: "-0.02em" }}
+          >
+            &ldquo;You + an AI engineer + this team
+            <br />= the new minimum viable founder.&rdquo;
+          </blockquote>
+          <p className="font-sans mb-6" style={{ color: "var(--gray-3)", fontSize: "1.05em" }}>
+            Ready to build?
+          </p>
+          <a
+            href="/contact"
+            className="font-mono font-medium px-6 py-3 rounded inline-block"
+            style={{ background: "var(--blue)", color: "#fff", fontSize: "0.85em" }}
+          >
+            Start the conversation
+          </a>
+        </div>
       </section>
     </main>
   );
