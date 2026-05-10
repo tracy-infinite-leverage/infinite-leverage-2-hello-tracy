@@ -32,7 +32,7 @@ export default function Home() {
     <main>
       {/* Section 1 — Hero */}
       <section
-        style={{ background: "#0B1426" }}
+        style={{ background: "#0F172A" }}
         className="min-h-screen flex flex-col justify-between px-8 py-16 md:px-16"
       >
         <div className="flex-1 flex flex-col justify-center">
@@ -73,7 +73,7 @@ export default function Home() {
       >
         <h2
           className="font-sans font-extrabold mb-12"
-          style={{ color: "#0B1426", fontSize: "clamp(36px, 5vw, 72px)" }}
+          style={{ color: "#0F172A", fontSize: "clamp(36px, 5vw, 72px)" }}
         >
           The Infinite Leverage Agenda
         </h2>
@@ -91,7 +91,7 @@ export default function Home() {
                 {t.n}
               </span>
               <div>
-                <p className="font-sans font-bold" style={{ color: "#0B1426" }}>
+                <p className="font-sans font-bold" style={{ color: "#0F172A" }}>
                   {t.name}
                 </p>
                 <p className="font-sans mt-1" style={{ color: "#64748B" }}>
@@ -104,10 +104,10 @@ export default function Home() {
       </section>
 
       {/* Section 3 — 18 Protocols */}
-      <section className="px-8 py-20 md:px-16" style={{ background: "#FFFFFF" }}>
+      <section className="px-8 py-20 md:px-16" style={{ background: "#F8FAFC" }}>
         <h2
           className="font-sans font-extrabold mb-12"
-          style={{ color: "#0B1426", fontSize: "clamp(32px, 4vw, 60px)" }}
+          style={{ color: "#0F172A", fontSize: "clamp(32px, 4vw, 60px)" }}
         >
           18 Protocols. One operating system.
         </h2>
@@ -124,7 +124,7 @@ export default function Home() {
               >
                 {p.n}
               </span>
-              <p className="font-sans" style={{ color: "#0B1426" }}>
+              <p className="font-sans" style={{ color: "#0F172A" }}>
                 {p.text}
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function Home() {
 
       {/* Section 4 — CTA */}
       <section
-        style={{ background: "#0B1426" }}
+        style={{ background: "#0F172A" }}
         className="px-8 py-24 md:px-16 flex flex-col items-start"
       >
         <blockquote
