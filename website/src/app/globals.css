@@ -92,7 +92,7 @@
   --blue:      #2563EB;
   --blue-soft: #DBEAFE;
   --cream:     #F2EDE3;
-  --paper:     #FFC0CB;
+  --paper:     #F8FAFC;
   --positive:  #059669;
   --negative:  #DC2626;
   --pending:   #D97706;
@@ -138,8 +138,8 @@
   }
   body {
     @apply bg-background text-foreground;
-    color: var(--ink);
-    background: var(--paper);
+    color: var(--paper);
+    background: #000000;
   }
   html {
     @apply font-sans;
